@@ -6,6 +6,10 @@ It works even better with around 5 inputs with other data such as financial macr
 this code only includes transformations of the Google stock price history, some basic transformations, 
 and a Fast Fourier transform implementation over 3 window sizes: 20, 40 and 80. 
 
+Smooth prediction:
+
+![Alt text](https://github.com/ConsciousMachines/goog_pred/blob/master/fft%20and%20mov%20avg.png)
+
 It is possible to rig the network to create leading predictions within 60 time steps if we set the Y predition 20 steps ahead. 
 
 Different parameters like inputs all have their uses: setting the prediction 20 time steps ahead can give us a leading prediction, 
@@ -17,3 +21,7 @@ sequences input into the LSTM.
 
 There is a lot of potential in putting a series of these LSTMs together with different parameters as they do a very good job of predicting 
 the shape of the time series with just 80% training size. 
+
+Noisy but leading prediction: 
+
+![Alt text](https://github.com/ConsciousMachines/goog_pred/blob/master/ffts1%201:vol_pc.png)
